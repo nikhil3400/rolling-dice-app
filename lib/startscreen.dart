@@ -37,7 +37,7 @@ class StartScreen extends StatelessWidget {
               Button(
                 name: 'Start',
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen() ));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen() ));
                 },
               ),
               SizedBox(height: 20.0),

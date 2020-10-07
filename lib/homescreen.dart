@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:rolling_dice/alertbox.dart';
+import 'package:rolling_dice/quit_alert.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -16,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   AlertBox obj;
   int flag=0;
   bool val;
+  QuitAlert quit = new QuitAlert();
 
   @override
   void initState() {
@@ -162,6 +164,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return  IconButton(
+              icon: Icon(
+                  Icons.arrow_back,
+                ),
+              onPressed: () => quit.showMyDialog(context),
+            );
+          },
+      ),
         backgroundColor: Colors.indigo,
         title: Text('Rolling Dice'),
         centerTitle: true,
