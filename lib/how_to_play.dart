@@ -37,9 +37,9 @@ class HowToPlay extends StatelessWidget {
              ),
            ),
            Text(
-             '2. Select the option you like.',
+             '2. Select the option that You think will be correct.',
              style: TextStyle(
-               fontSize: 24,
+               fontSize: 22,
                fontWeight: FontWeight.bold,
              ),
            ),
