@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rolling_dice/button.dart';
 import 'package:rolling_dice/homescreen.dart';
 import 'package:rolling_dice/how_to_play.dart';
+import 'dart:io';
 
 class StartScreen extends StatelessWidget {
   @override
@@ -50,7 +51,7 @@ class StartScreen extends StatelessWidget {
               Button(
                 name: 'Quit',
                 onPressed: (){
-
+                  exit(0);
                 },
               ),
              SizedBox(height: 350),
